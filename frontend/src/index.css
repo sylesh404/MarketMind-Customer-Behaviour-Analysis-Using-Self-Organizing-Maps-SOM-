@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-black text-zinc-100 font-sans antialiased selection:bg-red-600 selection:text-white min-h-screen overflow-x-hidden;
+  }
+}
+
+/* Custom Scrollbars in Black & Crimson */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 9999px;
+  border: 1px solid #18181b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}
+
+/* Glassmorphism Black & Crimson Panels */
+.glass-panel {
+  background: rgba(10, 10, 10, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(239, 68, 68, 0.15);
+  box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.85);
+}
+
+.glass-card {
+  background: rgba(15, 15, 15, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Custom Crimson Glows */
+.glow-red {
+  box-shadow: 0 0 30px -5px rgba(239, 68, 68, 0.45);
+}
+
+.glow-ruby {
+  box-shadow: 0 0 25px -4px rgba(220, 38, 38, 0.5);
+}
+
+.glow-crimson {
+  box-shadow: 0 0 20px -3px rgba(185, 28, 28, 0.4);
+}
+
+/* Heatmap Grid Cell Animations with Red Focus */
+.umatrix-cell {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.umatrix-cell:hover {
+  transform: scale(1.12);
+  z-index: 20;
+  box-shadow: 0 0 16px rgba(239, 68, 68, 0.9);
+}
